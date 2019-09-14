@@ -70,22 +70,20 @@ my_short2 = my_short2 + 1;
   unsigned short my_short3 = 65535; // maximum value for an unsigned short
   int my_int3 = my_short3;
 
-  //add 1 to the number
-  my_int3 = my_short3 + 1;
-
 
   std::cout << "Unsigned short (" << sizeof(my_short3) << " bytes): "
     << std::dec << my_short3 << std::hex << " (0x" << my_short3 << ')';
-  my_short3 = 65535;
+  my_short3 = my_short3 + 1;
   std::cout << ", after adding 1: " << std::dec << my_short3
     << std::hex << " (0x" << my_short3 << ")\n";
 
   std::cout << "Same value as int (" << sizeof(my_int3) << " bytes): "
     << std::dec << my_int3 << std::hex << " (0x" << my_int3 << ')';
-  my_int3 = 65535;
+  my_int3 = my_int3 + 1;
   std::cout << ", after adding 1: " << std::dec << my_int3
     << std::hex << " (0x" << my_int3 << ")\n";
-    //short2 became negative since it went above the max value for short2
+    //It becomes 0 after adding 1 for the short value since it overflows since
+    //short allows it to
 
   // ** not required, but for more practice, feel free to add code below which **
   // ** tests underflow and overflow using other data types **
