@@ -8,16 +8,20 @@ int main()
   // then print both the char and the short
 
   char my_char1 = 'J';
-  short my_short1 = ;
-  std::cout << "The ASCII value for " << my_char1 << " is " << my_short1 << std::endl;
+  short my_short1 = 74 ;
+  std::cout << "The ASCII value for " << my_char1 << " is " <<my_short1 << std::endl;
+  std::cout <<static_cast<char> (my_char1);
+  std::cout <<static_cast<short> (my_short1);
+
 
   std::cout << std::endl; // blank line to separate output from the different exercises
 
   // TODO#2: add one to the character to see what gets printed out
 
   char my_char2 = 'C';
-  my_char2 = ;
-  std::cout << "Char1: " << my_char2 << std::endl;
+  my_char2 = my_char2 + 1;
+  std::cout << "Char2: " << my_char2 << std::endl;
+  //It changes the character C to D after adding 1
 
   std::cout << std::endl; // blank line to separate output from the different exercises
 
@@ -25,9 +29,10 @@ int main()
   // and add a comment explaining why the value of the character is no
   // longer alphabetic
 
-  char my_char3 = 'z';
-  my_char3 = ;
-  std::cout << "Char2: " << my_char3 << std::endl;
+  char my_char3 = 'Z';
+  my_char3 = my_char3 + 1;
+  std::cout << "Char3: " << my_char3 << std::endl;
+  // It changed Z to ] after adding 1
 
   std::cout << std::endl; // blank line to separate output from the different exercises
 
@@ -40,17 +45,21 @@ int main()
   short my_short2 = 32767; // maximum value for a short
   int my_int2 = my_short2;
 
+//Add 1 to each number
+my_short2 = my_short2 + 1;
+
   std::cout << "Short (" << sizeof(my_short2) << " bytes): "
     << std::dec << my_short2 << std::hex << " (0x" << my_short2 << ')';
-  my_short2 = ;
+  my_short2 = 32767;
   std::cout << ", after adding 1: " << std::dec << my_short2
     << std::hex << " (0x" << my_short2 << ")\n";
 
   std::cout << "Int (" << sizeof(my_short2) << " bytes): "
     << std::dec << my_int2 << std::hex << " (0x" << my_int2 << ')';
-  my_int2 = ;
+  my_int2 = 32767;
   std::cout << ", after adding 1: " << std::dec << my_int2
     << std::hex << " (0x" << my_int2 << ")\n";
+  // Short2 became negative since it went above the maximum value for Short2.
 
   std::cout << std::endl; // blank line to separate output from the different exercises
 
@@ -61,17 +70,22 @@ int main()
   unsigned short my_short3 = 65535; // maximum value for an unsigned short
   int my_int3 = my_short3;
 
+  //add 1 to the number
+  my_int3 = my_short3 + 1;
+
+
   std::cout << "Unsigned short (" << sizeof(my_short3) << " bytes): "
     << std::dec << my_short3 << std::hex << " (0x" << my_short3 << ')';
-  my_short3 = ;
+  my_short3 = 65535;
   std::cout << ", after adding 1: " << std::dec << my_short3
     << std::hex << " (0x" << my_short3 << ")\n";
 
   std::cout << "Same value as int (" << sizeof(my_int3) << " bytes): "
     << std::dec << my_int3 << std::hex << " (0x" << my_int3 << ')';
-  my_int3 = ;
+  my_int3 = 65535;
   std::cout << ", after adding 1: " << std::dec << my_int3
     << std::hex << " (0x" << my_int3 << ")\n";
+    //short2 became negative since it went above the max value for short2
 
   // ** not required, but for more practice, feel free to add code below which **
   // ** tests underflow and overflow using other data types **
